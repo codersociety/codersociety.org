@@ -103,7 +103,7 @@ nav a{
   font-size: 18px;
   font-weight: 100;
   font-family: courier;
-  padding: 0px 20px;
+  padding: 0px 24px;
   color: #333;
   text-decoration: none;
 }
@@ -148,7 +148,7 @@ footer span{
     text-decoration: line-through;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 760px) {
   #mainwrap{
     width: 480px;
   }
@@ -179,7 +179,35 @@ footer span{
     height: 68px;
   }
 }
-/*@media screen and (max-width: 480px) {
-  
-}*/
+@media screen and (max-width: 480px) {
+  #top{
+    text-align: center;
+  }
+  nav{
+    height: 900px;
+    background: black;
+    color: #FFF;
+    text-align: center;
+    margin: 0 auto;
+  }
+  nav a{
+    margin: 0 auto;
+    list-style: square;
+    display: list-item;
+    text-decoration: none;
+    font-size: 20px;
+    color: #FFF;
+    padding: 32px 46px;
+    border-radius: 10px;
+  }
+  footer{
+    display: none;
+  }
+  #main{
+    display: none;
+  }
+  #low{
+    display: none;
+  }
+}
 
