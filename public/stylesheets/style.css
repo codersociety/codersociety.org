@@ -1,3 +1,4 @@
+
 html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 html, button, input, select, textarea { font-family: sans-serif; color: #222; }
 body { margin: 0; font-size: 1em; line-height: 1.4; }
@@ -66,6 +67,9 @@ body{
     right: 0;
     background: #ff182c;
     box-shadow: 0px 6px 3px #888;
+}
+#redbar h1{
+    margin-left: 19%;
 }
 #mainwrap{
     width: 780px;
