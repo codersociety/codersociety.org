@@ -3,6 +3,14 @@ html
  head
   title= title
   link(rel='stylesheet', href='/stylesheets/style.css')
+  link(rel='stylesheet', href='/css/blitzer/jquery-ui-1.8.18.custom.css')
+  | <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+  | <script type="text/javascript" src="js/jquery-ui-1.8.18.custom.min.js"></script>
+  | <script type="text/javascript">
+  |			$(function(){
+  |				$('#tabs').tabs();
+  |			});
+  | </script>
  body
   #mainwrap
       #redbar
@@ -15,8 +23,25 @@ html
         a(href='#') Mission
         a(href='#') Events
         a(href='#') About
+
+       #tabs
+        ul
+         li
+            a(href='tabshome') Home
+         li
+            a(href='tabsmission') Mission
+         li
+            a(href='tabsevents') Events
+         li
+            a(href='tabsabout') About
+
+        #tabshome Lorum spotsum, stuffz.
+        #tabsmission More stuff.
+        #tabsevents Blagh.
+        #tabsabout ...and About.
+
        != body
       #low
        footer Their approach:&nbsp
         span 1.Brainstorm(maybe). 2.Vote(sort of). 3.Group. 4.Present.
-        | &nbspOurs: 1.Vote. 2.Group 3.Build.
+        | &nbspOurs: 1.Vote. 2.Group 3.Create.
