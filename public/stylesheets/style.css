@@ -55,9 +55,24 @@ input:invalid, textarea:invalid { background-color: #f0dddd; }
 table { border-collapse: collapse; border-spacing: 0; }
 td { vertical-align: top; }
 .chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0; }
+@font-face{
+    font-family: cleanwork;
+    src: url("cleanwork.ttf");
+}
+@font-face{
+    font-family: codebold;
+    font-weight: bold;
+    src: url("codebold.otf");
+}
+@font-face{
+    font-family: codelight;
+    src: url("codelight.otf");
+}
+
 /*NORMALS*/
 body{
     background: #bbb;
+    font-family: "codebold";
 }
 #redbar{
     position: absolute;
@@ -70,6 +85,8 @@ body{
 }
 #redbar h1{
     margin-left: 19%;
+    font-size: 36px;
+    font-family: "cleanwork";
 }
 #mainwrap{
     width: 780px;
@@ -118,15 +135,9 @@ nav a{
     padding-top: 2px;
     height: 460px;
 }
-#main h1{
-    font-weight: 400;
-    font-size: 60px;
-    padding: 0px 0px;
-    font-family: helvetica;
-}
 #main p{
     padding: 0px 16px;
-    font-family: courier;
+    font-family: "codebold";
 }
 #low{
     background: #bbb;
@@ -146,6 +157,7 @@ footer{
     font-family: courier;
     text-align: center;
     color: #CCC;
+    font-size: 15px;
 }
 footer span{
     color: #666;
