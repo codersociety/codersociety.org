@@ -111,10 +111,12 @@ header a:hover{
     width: 1900px;
     height: 86px;
     background: red;
+    padding-top: 14px;
     -webkit-transform: rotate(32deg);
     -moz-transform: rotate(32deg);
     transform: rotate(32deg);
     z-index: 800;
+    font-size: 24px;
 }
 #upperrightbranch{
     position: fixed;
@@ -122,27 +124,29 @@ header a:hover{
     right: -750;
     width: 1900px;
     height: 86px;
-    background: red;
+    background: #000;
+    padding-top: 14px;
+    color: #FFF;
     -webkit-transform: rotate(-32deg);
     -moz-transform: rotate(-32deg);
     transform: rotate(-32deg);
     z-index: 800;
+    font-size: 24px;
 }
 nav{
-    margin-right: 14%;
-    left: -140;
+    margin: 0 auto;
     height: 24px;
     padding-top: 9px;
-    width: 800px;
+    width: 700px;
     cursor: default;
 }
 
 nav a{
     width: 60px;
     height: 20px;
-    font-size: 16px;
+    font-size: 14px;
     font-family: "codebold";
-    padding: 32px 44px;
+    padding: 28px 44px;
     color: #333;
     background: red;
     text-decoration: none;
@@ -150,11 +154,11 @@ nav a{
 }
 nav a:first-child{
     border-bottom-left-radius: 80px;
-    padding-left: 100px;
+    padding-left: 90px;
 }
 nav a:last-child{
     border-bottom-right-radius: 80px;
-    padding-right: 100px;
+    padding-right: 90px;
 }
 #info{
     padding-top: 46px;
@@ -162,6 +166,7 @@ nav a:last-child{
     width: 100%;
     font-family: arial, helvetica, sans-serif;
     text-align: center;
+    text-shadow: 0px 1px 2px #FFF;
 }
 #info p{
     cursor: default;
@@ -222,8 +227,7 @@ footer span{
     padding-right: 40px;
     }
     footer{
-        height: 30px;
-        font-size: 14px;
+        display: none;
     }
     #low{
         height: 20px;
@@ -244,8 +248,20 @@ footer span{
         height: 4px;
         height: 86px;
     }
+    #mainwrap{
+        width: 200px;
+        margin: 0 auto;
+        height: auto;
+    }
+    #upperrightbranch{
+        display: none;
+    }
+    #upperleftbranch{
+        display: none;
+    }
     nav{
         height: 900px;
+        width: 140px;
         background: black;
         color: #FFF;
         text-align: center;
@@ -258,8 +274,8 @@ footer span{
         text-decoration: none;
         font-size: 14px;
         color: #FFF;
-        margin-top: 10px;
-        padding: 24px 30px;
+        margin-top: 54px;
+        padding: 26px 30px;
         border-radius: 10px;
     }
     footer{
