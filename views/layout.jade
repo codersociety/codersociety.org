@@ -1,22 +1,15 @@
-doctype html
+doctype html.js
 html
  head
   title = title
-  link(rel='stylesheet', href='/stylesheets/style.css')
-  link(rel='stylesheet', href='/css/blitzer/jquery-ui-1.8.18.custom.css')
   | <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
-  | <script type="text/javascript" src="js/jquery-ui-1.8.18.custom.min.js"></script>
-  | <script type="text/javascript">
-  |			$(function(){
-  |				$('#tabs').tabs();
-  |			});
-  | </script>
+  link(rel='stylesheet', href='/stylesheets/style.css')
  body
   #mainwrap
-      #redbar
-        h1 Coder Society
+      header
+        a(href="/") Coder Society
+        #headerbox
       #top
-       header
         #logo
        nav
          a(href="about") About

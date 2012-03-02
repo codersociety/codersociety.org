@@ -6,10 +6,10 @@ body { margin: 0; font-size: 1em; line-height: 1.4; }
 ::-moz-selection { background: #cc0000; color: #FFF; text-shadow: none; }
 ::selection { background: #cc0000; color: #FFF; text-shadow: none; }
 
-a { color: #222; }
-a:visited { color: #222; }
+a { color: #FFF;background: red;}
+a:visited { color: #FFF; }
 a:focus { outline: none; }
-a:hover{color: #FFF;}
+a:hover{background: #000;}
 abbr[title] { border-bottom: 1px dotted; }
 b, strong { font-weight: bold; }
 blockquote { margin: 1em 40px; }
@@ -19,25 +19,6 @@ ins { background: #ff9; color: #000; text-decoration: none; }
 mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
 pre, code, kbd, samp { font-family: monospace, serif; _font-family: 'courier new', monospace; font-size: 1em; }
 pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
-
-q { quotes: none; }
-q:before, q:after { content: ""; content: none; }
-small { font-size: 85%; }
-sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
-sup { top: -0.5em; }
-sub { bottom: -0.25em; }
-
-ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
-dd { margin: 0 0 0 40px; }
-nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
-
-img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
-svg:not(:root) { overflow: hidden; }
-figure { margin: 0; }
-
-form { margin: 0; }
-fieldset { border: 0; margin: 0; padding: 0; }
-
 label { cursor: pointer; }
 legend { border: 0; *margin-left: -7px; padding: 0; white-space: normal; }
 button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
@@ -66,31 +47,49 @@ td { vertical-align: top; }
 }
 @font-face{
     font-family: codelight;
+    font-weight: 200;
     src: url("codelight.otf");
 }
-
+/*Also the body font will be Arial, Helvetica, sans-serif */
 /*NORMALS*/
 body{
     background: #bbb;
     font-family: "codebold";
 }
-#redbar{
+.js{
+    display: none;
+}
+header{
     position: absolute;
+    font-family: "cleanwork";
     width: 100%;
-    height: 94px;
+    height: 72px;
+    padding-top: 20px;
     left: 0;
     right: 0;
     background: #ff182c;
-    box-shadow: 0px 6px 3px #888;
+    z-index: 901;
 }
-#redbar h1{
+header a{
+    padding-top: 10px;
     margin-left: 19%;
-    font-size: 36px;
-    font-family: "cleanwork";
+    font-size: 34px;
+    letter-spacing: 2px;
+    color: #000;
+    text-decoration: none;
+}
+header a:hover{
+    background: red;
+}
+#headerbox{
+    position: absolute;
+    width: 100%;
+    top: 80px;
+    border-bottom: 6px solid #FFF;
 }
 #mainwrap{
     width: 780px;
-    height: 1640px;
+    height: 1940px;
     padding-bottom: 90px;
     margin: 0 auto;
 }
@@ -98,52 +97,83 @@ body{
     background: #bbb;
     margin: 0 auto;
     width: 100%;
-    height: 116px;
-}
-header{
-    background: inherit;
-    margin: 0 auto;
-    width: 100%;
-    height: 180px;
-    text-align: center;
+    height: 100px;
+    color: #444;
+    font-size: 18px;
 }
 #logo img{
     width: auto;
 }
-nav{
-    margin: 0 auto;
-    height: 24px;
-    padding-top: 34px;
-    width: 100%;
-    cursor: default;
-    font-weight: bold;
+#upperleftbranch{
+    position: fixed;
+    top: 340;
+    left: -750;
+    width: 1900px;
+    height: 86px;
+    background: red;
+    -webkit-transform: rotate(32deg);
+    -moz-transform: rotate(32deg);
+    transform: rotate(32deg);
+    z-index: 800;
 }
+#upperrightbranch{
+    position: fixed;
+    top: 340;
+    right: -750;
+    width: 1900px;
+    height: 86px;
+    background: red;
+    -webkit-transform: rotate(-32deg);
+    -moz-transform: rotate(-32deg);
+    transform: rotate(-32deg);
+    z-index: 800;
+}
+nav{
+    margin-right: 14%;
+    left: -140;
+    height: 24px;
+    padding-top: 9px;
+    width: 800px;
+    cursor: default;
+}
+
 nav a{
     width: 60px;
     height: 20px;
-    font-size: 18px;
-    font-weight: 100;
-    font-family: courier;
-    padding: 0px 24px;
+    font-size: 16px;
+    font-family: "codebold";
+    padding: 32px 44px;
     color: #333;
+    background: red;
     text-decoration: none;
+    letter-spacing: 2px;
 }
-#main{
-    background: #bbb;
+nav a:first-child{
+    border-bottom-left-radius: 80px;
+    padding-left: 100px;
+}
+nav a:last-child{
+    border-bottom-right-radius: 80px;
+    padding-right: 100px;
+}
+#info{
+    padding-top: 46px;
     margin: 0 auto;
     width: 100%;
-    padding-top: 2px;
-    height: 460px;
+    font-family: arial, helvetica, sans-serif;
+    text-align: center;
 }
-#main p{
-    padding: 0px 16px;
-    font-family: "codebold";
+#info p{
+    cursor: default;
 }
 #low{
     background: #bbb;
     margin: 0 auto;
     width: 100%;
     height: 60px;
+}
+#low p{
+    margin-left: 34px;
 }
 footer{
     position: fixed;
@@ -158,28 +188,38 @@ footer{
     text-align: center;
     color: #CCC;
     font-size: 15px;
+    z-index: 1000;
 }
 footer span{
     color: #666;
     text-decoration: line-through;
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 720px) {
     #mainwrap{
         width: 480px;
     }
-    #main h1{
-        font-size: 24px;
-        font-weight: bold;
+    header{
+        text-align: center;
     }
-    #main p{
-        font-size: 16px;
+    header a{
+        text-align: center;
+        margin: 0;
     }
     nav{
         text-align: center;
+        width: 380px;
+        margin: 0 auto;
     }
     nav a{
-        font-size: 14px;
+        font-size: 13px;
+        padding: 14px 12px;
+    }
+    nav a:first-child{
+        padding-left: 40px;
+    }
+    nav a:last-child{
+    padding-right: 40px;
     }
     footer{
         height: 30px;
@@ -192,12 +232,17 @@ footer span{
         height: 180px;
     }
     #top{
-        height: 68px;
+        height: 94px;
     }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 460px) {
+    body{
+        background: #000;
+    }
     #top{
         text-align: center;
+        height: 4px;
+        height: 86px;
     }
     nav{
         height: 900px;
@@ -208,15 +253,19 @@ footer span{
     }
     nav a{
         margin: 0 auto;
-        list-style: square;
+        list-style: none;
         display: list-item;
         text-decoration: none;
-        font-size: 20px;
+        font-size: 14px;
         color: #FFF;
-        padding: 32px 46px;
+        margin-top: 10px;
+        padding: 24px 30px;
         border-radius: 10px;
     }
     footer{
+        display: none;
+    }
+    footer:*{
         display: none;
     }
     #main{
